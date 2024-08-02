@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content %}
+    <div class="content-section">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-12">
+                <form method="POST" action="">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" class="form-control" rows="4"></textarea>
+                    <div class="d-grid gap-4">
+                        <button class="mt-4 btn btn-dark btn-block primaryAction" type="submit">POST</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

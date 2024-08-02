@@ -1,0 +1,37 @@
+{% extends "base.html"%}
+{% block content %}
+
+<style>
+    .rounded-circle{
+    border:2px solid;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+}
+
+</style>
+<div class="content-section">
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-12">
+            <form method="POST" enctype = "multipart/form-data">
+                <div class="media">
+                    <img style="max-width: 100%;" class="rounded-circle account-img" src="{{ image_file }}">
+                    <div class="media-body">
+                        <h2 class="account-heading">{{ current_user.fName }}</h2>
+                        <p class="text-secondary">{{ current_user.username }}</p>
+                        <label for="bio">Biography</label>
+                        <textarea id="bio" name="bio" class="form-control" rows="4">{{ current_user.bio }}</textarea>
+                        <label for="avatar">Avatar Upload</label>
+                        <div class="d-grid gap-2">
+                            </div>
+                        <input type="file" id="avatar" name="avatar" accept="image/jpeg, image/png" />
+                        <div class="d-grid gap-4">
+                            <button class="mt-4 btn btn-dark btn-block primaryAction" type="submit">Update Account</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

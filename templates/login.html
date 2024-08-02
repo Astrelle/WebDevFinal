@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+{% block content %}
+
+<div class = "login">
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-12">
+            <h1>Login!</h1>
+            <form method="POST">
+                <div class="form-outline mb-4">
+                    <label for="username"> Email Address:</label>
+                    <input type="text" name="username" class="form-control" />
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="password"> Password:</label>
+                    <input type="text" name="password" class="form-control" />
+                </div>
+                <div class="d-grid gap-4">
+                    <button class="mt-4 btn btn-dark btn-block primaryAction" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
